@@ -8,6 +8,11 @@ import { useInterval } from 'react-use';
 
 function App() {
 
+  const breakMinutes = 50;
+  const breakMmss = '5000';
+  const breakFormat = 'YYYY-MM-DD HH:50';
+  const youtubeURL = 'https://www.youtube.com/watch?v=6fnLKyRJsrs';
+
   const NextBreakTime = () => {
     const [now, setNow] = useState<string>();
     const [breakTime, setBreakTime] = useState<Date>();
@@ -16,8 +21,9 @@ function App() {
     useInterval(() => {
       setNow(moment().format('YYYYMMDDhhmmss'));
       const nowTime = moment().format('mmss');
-      if (nowTime === '5000'){
-        let m = moment().add(1,'hour').format('YYYY-MM-DD HH:mm');
+      if (nowTime === breakMmss){
+        window.open(youtubeURL,'_blank');
+        let m = moment().add(1,'hour').format(breakFormat);
         setBreakTime(new Date(m));
       }
     }, 1000);
@@ -29,14 +35,13 @@ function App() {
 
     useEffect(()=> {
       const minutes = moment().format('mm');
-      if (Number(minutes)>= 50){
-        let m = moment().add(1,'hour').format('YYYY-MM-DD HH:50');
+      if (Number(minutes)>= breakMinutes){
+        let m = moment().add(1,'hour').format(breakFormat);
         setBreakTime(new Date(m));
       }else{
-        let m = moment().format('YYYY-MM-DD HH:50');
+        let m = moment().format(breakFormat);
         setBreakTime(new Date(m));
       }
-     
     },[])
 
     return (
