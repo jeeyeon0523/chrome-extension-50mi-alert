@@ -7,7 +7,15 @@
     "default_popup": "index.html",
     "defalut_title": "Open the popup"
   },
-  "permissions": [],
+  "permissions": [
+    "alarms"
+  ],
+  "background":{
+    "scripts":[
+      "background.js"
+    ],
+    "persistent":false
+  },
   "icons":{
     "16": "icon16.png",
     "48": "icon48.png",

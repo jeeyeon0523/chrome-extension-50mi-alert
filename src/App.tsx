@@ -11,18 +11,15 @@ function App() {
   const breakMinutes = 50;
   const breakMmss = '5000';
   const breakFormat = 'YYYY-MM-DD HH:50';
-  const youtubeURL = 'https://www.youtube.com/watch?v=6fnLKyRJsrs';
 
   const NextBreakTime = () => {
     const [now, setNow] = useState<string>();
     const [breakTime, setBreakTime] = useState<Date>();
     
-    // useInterval
     useInterval(() => {
       setNow(moment().format('YYYYMMDDhhmmss'));
       const nowTime = moment().format('mmss');
       if (nowTime === breakMmss){
-        window.open(youtubeURL,'_blank');
         let m = moment().add(1,'hour').format(breakFormat);
         setBreakTime(new Date(m));
       }

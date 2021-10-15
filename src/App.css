@@ -38,20 +38,27 @@
 }
 
 .timer {
-  /* width : 180px; */
-  width : 150px;
+  width : 180px; 
+  text-align: center;
+  padding: 10px;
+  background-color: black;
+ 
+  /* width : 150px;
   height: 270px;
   background-image: url('./image/kong_4.png');
   background-repeat: no-repeat;
   text-align: center;
-  padding: 10px;
+  padding: 10px; */
 }
 
 .timer .Neon-text {
-  margin-top: 30px;
+  /* margin-top: 30px; */
   color: #fff; 
-  text-shadow: /* White glow */ 0 0 7px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 21px rgb(0, 0, 0),
-  /* Green glow */ 0 0 42px rgb(0, 0, 0), 0 0 82px rgb(0, 0, 0), 0 0 92px rgb(0, 0, 0), 0 0 102px rgb(0, 0, 0), 0 0 151px rgb(0, 0, 0);
+  /* text-shadow: 0 0 7px rgb(0, 0, 0), 0 0 10px rgb(0, 0, 0), 0 0 21px rgb(0, 0, 0),
+  0 0 42px rgb(0, 0, 0), 0 0 82px rgb(0, 0, 0), 0 0 92px rgb(0, 0, 0), 0 0 102px rgb(0, 0, 0), 0 0 151px rgb(0, 0, 0); */
+
+  text-shadow: /* White glow */ 0 0 7px rgb(55, 255, 122), 0 0 10px rgb(55, 255, 122), 0 0 21px rgb(55, 255, 122),
+  /* Green glow */ 0 0 42px rgb(55, 255, 122), 0 0 82px rgb(55, 255, 122), 0 0 92px rgb(55, 255, 122), 0 0 102px rgb(55, 255, 122), 0 0 151px rgb(55, 255, 122);
 }
 
 
